@@ -1,0 +1,128 @@
+$palette: (
+    neutral: (
+        0 : #fff,
+        1000: #000,
+    ),
+
+    primary:(
+        50: #e7e7e7,
+        200: #3a3a3a,
+        300: #121212,
+        text: #121212,
+    ),
+
+    secondary:(
+        100: #fcddc9,
+        200: #fbccaf,
+        500: #f69051,
+        700: #af663a,
+    ),
+
+    lassonde: (
+        creative: #993366,
+        passionate: #cc3333,
+        rational: #003366,
+        confident: #339999,
+        ingenious: #ffcc00,
+    ),
+
+    taylorswift:(
+        ts-album10: #efc180, // fearless
+        ts-album13: #c788e5, // speak now
+        ts-album11: #af2b1a, // red
+        ts-album14: #5c8bf4, // 1989
+        ts-album6: #333341, // reputation
+        ts-album7: #f7baf6, // lover
+        ts-album8: #bababa, // folklore
+        ts-album9: #7f5a4a, // evermore
+        ts-album12: #242e72, // midnights
+    ),
+
+    grc-light:(
+        primary: #172427,
+        on-primary: #FFF,
+        primary-variant: rgba(23, 36, 39, 0.55),
+        primary-container-1: #BABFC1,
+        primary-container-2: #99A1A3, //rgba(106, 118, 121, 0.55)
+        primary-container-hover: #E9EBEB, //rgba(106, 118, 121, 0.28)
+        secondary: #173D87,
+        secondary-hover: #3B61A9,
+        on-secondary: #FFF,
+        secondary-container: #B7C3DA,
+        on-secondary-container: #102B60,
+        secondary-variant: #1E53BA,
+        secondary-variant-hover: #5187F2,
+        on-secondary-variant: #FFF,
+        on-secondary-variant-2: #E8ECF3,
+        tertiary: #E8BB31,
+        on-tertiary: #172427,
+        tertiary-container: #FFE8A3,
+        on-tertiary-continer: #213237,
+        red: #CE3041,
+        on-red: #FFF,
+        red-container: #F2A2AA,
+        on-red-container: #5F161E,
+        neutral-0: #FFF,
+        neutral-1000: #000
+    ),
+);
+
+$text: ( // size, weight, height, spacing
+    header:(
+        logo-full: (14px, 800, 17.5px, 0.3px),
+        logo: (40px, 700, 40px, 0.5px),
+        logo-small: (32px,700,32px,0.5px),
+        menu-item: (13px,600, 24px, 0.2px),
+        lang-item: (12px, 400, 16px, 0.2px),
+    ),
+    display:(
+        1: (80px, 600, 112px, -1.5px),
+        2: (60px, 600, 64px, -0.5px),
+        2-small: (51px, 600, 64px, -0.5px),
+        1-bold: (80px, 700, 112px,-1.5px),
+        2-bold: (60px, 700, 64px, -0.5px),
+    ),
+    heading:(
+        1:(36px, 700, 56px, 0),
+        1-small:(29px,700,48px, 0),
+        2:(29px,700,48px, 0),
+        2-small:(26px,700,40px, 0),
+        3:(26px,700,40px, 0),
+        3-small:(23px,700,36px, 0),
+        4:(23px,700,36px, 0),
+        4-small:(21px,700,32px, 0),
+        5:(21px,700,32px, 0),
+        5-small:(18px, 700, 24px, 0),
+        6:(18px, 700, 24px, 0),
+        6-small:(16px, 700, 24px, 0),
+    ),
+    body: (
+        large: (16px, 400, 24px, 0.5px),
+        large-semibold: (16px, 600, 24px, 0.5px),
+        small: (14px, 400, 24px,0.25px),
+        small-semibold: (14px,600, 24px,0.25px),
+        button: (16px,600,16px,0.5px),
+        button-small: (14px, 600, 16px, 1px),
+        caption: (13px, 400, 16px, 0.35px),
+        caption-semibold: (13px,600, 16px, 0.35px),
+        caption-small: (12px, 400, 16px,0.45px),
+        caption-small-semibold: (12px, 600, 16px, 0.45px),
+        footer: (14px, 400, 16px, 0.5px),
+        footer-semibold: (14px, 600, 16px, 0.5px),
+        submenu-item: (17px, 500, 24px, 0.5px),
+    ),
+);
+
+@function get-color($type, $tone){
+    @return map-get(map-get($palette, $type), $tone);
+}
+
+@mixin set-text($type, $size){
+    $text: map-get(map-get($text, $type), $size);
+    font-size: nth($text, 1);
+    font-weight: nth($text, 2);
+    line-height: nth($text, 3);
+    letter-spacing: nth($text, 4);
+    @if ($type == body or $type == header and not str-index($size, logo)){ font-family: 'IBM Plex Serif', serif; }
+    @else{ font-family: "adobe-garamond-pro", serif; } 
+}

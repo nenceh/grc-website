@@ -1,0 +1,305 @@
+@media screen and (max-width: 479px){
+    .landing-container .landing-media img{height: 200px;}
+    .hero{
+        .major-title{padding: 16px 24px 0;}
+        .minor{padding: 16px 24px 0;}
+    }
+    .landing-1 .main{
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    .landing-2 .action, .landing-3 .top{padding: 0 24px;}
+    .landing-3{margin-top: 40px;}
+}
+
+@media screen and (min-width: 480px){
+    .landing-container .landing-media img{height: 248px;}
+    .hero{
+        .major-title{padding: 16px 35px 0;}
+        .minor{padding: 16px 35px 0;}
+    }
+    .landing-1 .main{
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+    .landing-2 .action, .landing-3 .top{padding: 0 35px;}
+    .landing-3{margin-top: 80px;}
+}
+
+@media screen and (max-width: 880px){
+    .hero{
+        .major-title{
+            @include set-text(body, small-semibold);
+            gap: 4px;
+        }
+        .minor{
+            @include set-text(body, small-semibold);
+            .blocks{padding: 8px 0;}
+            a{@include set-text(body, caption-small-semibold);}
+        }
+    }
+
+    .minor-block, .tag a{
+        @include set-text(body, caption-small-semibold);
+        gap: 4px;
+    }
+
+    .landing-1{
+        .main{width: 100%;}
+        .info{
+            gap: 16px;
+            &-section{gap: 24px 40px;}
+            &-block{
+                width: 298px;
+                gap: 8px;
+                height: fit-content;
+                &>div{@include set-text(body, small-semibold);}
+                a{@include set-text(body, caption-small-semibold);}
+            }
+            .hr{
+                padding: 10px 0;
+               hr{
+                    width: 100%;
+                    border: none;
+                    border-radius: 16px;
+                    height: 4px;
+                    background: get-color(grc-light, primary-container-2);
+                } 
+            }
+        }
+        &>.btn-primary{
+            width: 298px;
+            margin-top: -24px;
+        }
+    }
+    .landing-2{
+        .action{
+            flex-wrap: wrap;
+            &-1, &-2{
+                width: 298px;
+                padding: 24px 40px;
+                &>div{gap: 8px;}
+            }
+        }
+    }  
+    #landing-3-label{
+        @include set-text(heading, 2-small);
+        font-weight: 600;
+        letter-spacing: 0.4px;
+    }  
+}
+
+@media screen and (min-width: 881px){
+    .landing-container .landing-media img{height: 360px;}
+    .hero{
+        position: relative;
+        .major{
+            position: relative;
+            .landing-media{
+                position: sticky;
+                top: 44px;
+                img{
+                    height: 100%;
+                    min-height: 400px;
+                    max-height: 600px;
+                }
+            }
+            &-title{
+                @include set-text(body, large-semibold);
+                padding: 24px 40px 0;
+                gap: 8px;
+                position: sticky;
+                background-color: white;
+            }
+        }
+        .minor{
+            @include set-text(body, large-semibold);
+            padding: 24px 35px 0;
+            height: fit-content;
+            .blocks{padding: 12px 0;}
+            a{@include set-text(body, caption-semibold);}
+        }
+    }
+
+    .minor-block, .tag a{
+        @include set-text(body, caption-semibold);
+        gap: 8px;
+    }
+
+    .landing-1 {
+        padding: 40px 0;
+        .main{
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        .info{
+            flex-direction: row;
+            gap: 40px;
+            padding: 0 80px;
+            &-section{
+                gap: 64px;
+                padding-bottom: 40px;
+                height: fit-content;
+            }
+            &-block{
+                max-width: 427px;
+                gap: 16px;
+                &>div p{margin-top: 8px;}
+                &>div{@include set-text(body, large-semibold);}
+                a{@include set-text(body, caption-small-semibold);}
+            }
+            .hr{
+                padding: 16px;
+                hr{
+                    height: 100%;
+                    border-radius: 16px;
+                    border: none;
+                    width: 8px;
+                    background: get-color(grc-light, primary-container-2);
+                }
+            }
+        }
+        &>.btn-primary{
+            padding: 20px 40px;
+            border-radius: 8px;
+            margin-top: -32px;
+        }
+    }
+    .landing-2{
+        margin: 40px 0;
+        .action{ 
+            padding: 0 40px;
+            flex-wrap: nowrap;
+            &-1, &-2{
+                padding: 40px;
+                &>div{gap: 16px;}
+            }
+        }
+    }
+    .landing-3{
+        margin-top: 120px;
+        .top{padding: 0 40px;}
+        #landing-3-label{
+            @include set-text(heading, 2);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+    }
+}
+
+@media screen and (max-width: 1175px){.hero{ flex-direction: column !important;}}
+
+@media screen and (min-width: 1176px){
+    .hero{
+        .major{
+            width: calc(((100% - 2 * 80px) * 2 - 40px) / 3 + 80px);
+            &-title{
+                position: sticky;
+                top: 100%;
+                padding-left: 80px;
+                padding-right: 0;
+            }
+            .landing-media img, &-title > *{
+                opacity: 0;
+                transition: opacity .3s ease-in;
+            }
+        }
+        .minor{
+            padding: 16px 0 0;
+            width: calc((100% - 80px - 2 * 80px) / 3);
+        }
+    }
+}
+
+.hero{
+    .major{line-height: 0;}
+    .minor-block{
+        border-top: 2px solid get-color(grc-light, primary-container-1);
+        padding: 10px 8px 8px 16px;
+    }
+}
+
+.top{
+    max-width: 598px;
+    p{text-align: center;}
+}
+.landing-media{
+    line-height: 0;
+    width: 100%;
+}
+
+.info-section{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.landing-1{
+    .main{
+        padding-top: 40px;
+        padding-bottom: 64px;
+        width: 100%;
+        background-color: #E8ECF3;
+
+        .info-section{
+            flex-flow: row wrap;
+            width: 100%;
+        }
+    }
+}
+
+.landing-2{
+    margin: 40px 0;
+    padding: 40px 0;
+    .action{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        &,p{font-weight: 600;}
+        &-1, &-2{
+            text-align: center;
+            height: fit-content;
+            max-width: 460px;
+        }
+        &-1{
+            color: get-color(grc-light, on-secondary-variant);
+            background-color: get-color(grc-light, secondary-variant-hover);
+        }
+        &-2{
+            color: get-color(grc-light, secondary-variant);
+            background-color: #E8ECF3;
+        }
+    }
+}
+
+.landing-3{
+    padding-top: 40px;
+    padding-bottom: 0 !important;
+    background-color: get-color(grc-light, primary);
+    color: get-color(grc-light, on-primary);
+    position: relative;
+    .landing-media{
+        position: relative;
+        &:before{
+            content: "";
+            position: absolute;
+            z-index: 1;
+            right: 0;
+            top: 0;
+            left: 0;
+            height: 80px;
+            pointer-events: none;
+            background-image: linear-gradient(to bottom, get-color(grc-light, primary), rgba(255,255,255,0));
+        }
+        &:after{
+            content: "";
+            position: absolute;
+            z-index: 1;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 40px;
+            pointer-events: none;
+            background-image: linear-gradient(to bottom, rgba(255,255,255,0), get-color(grc-light, secondary-variant) 95%);
+        }
+    }
+}

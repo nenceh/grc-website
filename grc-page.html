@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TITLE | GRC</title>
+
+    <link rel="stylesheet" href="css/grc.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/eze6omt.css">
+    <link rel="icon" type="image/x-icon" href="img/grc-logo-icon.png">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/grc.js"></script>
+  </head>
+
+  <body>
+    <div class = "header-container">
+        <nav class="header">
+            <div class = "header-logo">
+                <a href="index.html" rel="home" class="block-link">
+                    <span class="large" aria-hidden="false">
+                        <img src="img/grc-logo-icon.png" alt="Logo image">
+                        GLOBAL<br>REPATRIATION<br>COUNCIL
+                    </span>
+                    <span class="small" aria-hidden="true">GRC</span>
+                </a>
+            </div>
+            <div class = "header-nav">
+                <div class = "header-nav-lang">
+                    <ul>
+                        <li><a href="#" aria-current="page" class="block-link" role="menuitem" xml:lang="en">English</a></li>
+                        <li><a href="#" class="block-link" role="menuitem" xml:lang="es">Español</a></li>
+                        <li><a href="#" role="menuitem" class="block-link" xml:lang="fr">Français</a></li>
+                        <li><a href="#" role="menuitem" class="block-link" xml:lang="zh-hans">中文</a></li>
+                        <li><a href="#" role="menuitem" class="block-link" xml:lang="ru">Русский</a></li>
+                    </ul>
+                </div>
+    
+                <div class = "header-nav-items" aria-label="Primary Navigation">
+                    <ul>
+                        <li><a href="grc-bulletin.html" class="btn-menuitem" role="menuitem">The Bulletin</a>
+                        <li class=""><a href="grc-services.html" class="btn-menuitem" role="menuitem">Our Services</a>
+                        <li class=""><a href="grc-protocols.html"class="btn-menuitem" role="menuitem">Protocols</a>
+                        <li><a href="grc-council.html" class="btn-menuitem" role="menuitem">Council</a>
+                        <li><a href="#" class="btn-menuitem" role="menuitem">The Blip</a>
+                    </ul>
+                    <div class="btn-header">
+                        <button onclick="toggleCTA()" class="btn-header-cta"> My Next Step
+                            <div class="btn-icon-padding">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M5.22 8.22a.749.749 0 0 0 0 1.06l6.25 6.25a.749.749 0 0 0 1.06 0l6.25-6.25a.749.749 0 1 0-1.06-1.06L12 13.939 6.28 8.22a.749.749 0 0 0-1.06 0Z"></path></svg>
+                            </div>
+                        </button>
+                    </div>
+                    
+                    <button onclick="toggleMenu()" class = "btn-icon menu" aria-label="Menu" aria-hidden="true">
+                        <div class="btn-icon-padding">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </div>
+    
+    <div class="modal-container submenu" aria-hidden="true">
+        <div class="submenu-modal">
+            <div class = "submenu-modal-header">
+                <button onclick="toggleMenu()" class = "btn-icon">
+                    <div class="btn-icon-padding">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M5.72 5.72a.75.75 0 0 1 1.06 0L12 10.94l5.22-5.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L13.06 12l5.22 5.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L12 13.06l-5.22 5.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L10.94 12 5.72 6.78a.75.75 0 0 1 0-1.06Z"></path></svg>
+                    </div>
+                </button>
+            </div>
+            <div class="submenu-modal-sitemap flex-col">
+                <nav class="submenu-primary" aria-label="Primary Navigation">
+                    <ul class="flex-col">
+                        <li><a href="grc-bulletin.html" class="btn-menuitem" role="menuitem">The Bulletin</a>
+                        <li class=""><a href="grc-services.html" class="btn-menuitem" role="menuitem">Our Services</a>
+                        <li class=""><a href="grc-protocols.html"class="btn-menuitem" role="menuitem">Protocols</a>
+                        <li><a href="grc-council.html" class="btn-menuitem" role="menuitem">Council</a>
+                        <li><a href="#" class="btn-menuitem" role="menuitem">The Blip</a>
+                    </ul>
+                </nav>
+                <div class="submenu-language">
+                    <label for="site-language" id="site-language-label">Display Language</label>
+                    <div class="input-container">
+                        <div class="btn-icon-padding">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1Zm3.241 10.5v-.001c-.1-2.708-.992-4.904-1.89-6.452a13.919 13.919 0 0 0-1.304-1.88L12 3.11l-.047.059c-.354.425-.828 1.06-1.304 1.88-.898 1.547-1.79 3.743-1.89 6.451Zm-12.728 0h4.745c.1-3.037 1.1-5.49 2.093-7.204.39-.672.78-1.233 1.119-1.673C6.11 3.329 2.746 7 2.513 11.5Zm18.974 0C21.254 7 17.89 3.329 13.53 2.623c.339.44.729 1.001 1.119 1.673.993 1.714 1.993 4.167 2.093 7.204ZM8.787 13c.182 2.478 1.02 4.5 1.862 5.953.382.661.818 1.29 1.304 1.88l.047.057.047-.059c.354-.425.828-1.06 1.304-1.88.842-1.451 1.679-3.471 1.862-5.951Zm-1.504 0H2.552a9.505 9.505 0 0 0 7.918 8.377 15.773 15.773 0 0 1-1.119-1.673C8.413 18.085 7.47 15.807 7.283 13Zm9.434 0c-.186 2.807-1.13 5.085-2.068 6.704-.39.672-.78 1.233-1.118 1.673A9.506 9.506 0 0 0 21.447 13Z"></path></svg>
+                        </div>
+                        <select id="site-language" aria-labelledby="site-language-label">
+                            <option value selected="selected" role="menuitem" xml:lang="es">English</option>
+                            <option value="#" role="menuitem" xml:lang="en">Español</option>
+                            <option value="#" role="menuitem" xml:lang="fr">Français</option>
+                            <option value="#" role="menuitem" xml:lang="zh-hans">中文</option>
+                            <option value="#" role="menuitem" xml:lang="ru">Русский</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="subheader-container">
+        <div class = subheader>
+            <nav class="subheader-text breadcrumb" aria-label="Breadcrumbs">
+                <ol>
+                    <li class="breadcrumb-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path d="M12.97 2.59a1.5 1.5 0 0 0-1.94 0l-7.5 6.363A1.5 1.5 0 0 0 3 10.097V19.5A1.5 1.5 0 0 0 4.5 21h4.75a.75.75 0 0 0 .75-.75V14h4v6.25c0 .414.336.75.75.75h4.75a1.5 1.5 0 0 0 1.5-1.5v-9.403a1.5 1.5 0 0 0-.53-1.144l-7.5-6.363Z"></path></svg>
+                    </li>
+                    <li class="breadcrumb-item"><a href="#" class="block-link">crumb</a></li>
+                    <li class="breadcrumb-item"><a href="#" aria-current="page" class="block-link">crumb</a></li>
+                </ol>
+            </nav>
+            <!-- <form role="search" method="get" class="subheader-search" action="" aria-expanded="false">  -->
+            <div class="subheader-search" aria-expanded="false">
+                <input type="text" placeholder="Search..." name="search" aria-hidden="false" aria-required="false" required>
+                <button onclick="toggleSearch()" class="btn-icon search" type="submit">
+                    <div class="btn-icon-padding">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M10.25 2a8.25 8.25 0 0 1 6.34 13.53l5.69 5.69a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215l-5.69-5.69A8.25 8.25 0 1 1 10.25 2ZM3.5 10.25a6.75 6.75 0 1 0 13.5 0 6.75 6.75 0 0 0-13.5 0Z"></path></svg>
+                    </div>
+                </button>
+            </div> <!-- </form> -->
+        </div>
+    </div>
+
+    <div class="modal-container header-cta" aria-hidden="true">
+       <div class="btn-header-modal">
+            <div class="btn-header-modal-header">
+                <h2>My Next Step</h2>
+                <button onclick="toggleCTA()" class = "btn-icon">
+                    <div class="btn-icon-padding">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M5.72 5.72a.75.75 0 0 1 1.06 0L12 10.94l5.22-5.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L13.06 12l5.22 5.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L12 13.06l-5.22 5.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L10.94 12 5.72 6.78a.75.75 0 0 1 0-1.06Z"></path></svg>
+                    </div>
+                </button>
+            </div>
+            <div class="btn-header-modal-body">
+                <nav class="flex-col">
+                    <div class="col-header">
+                        <div class="btn-icon-padding">
+                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M192 0c-41.8 0-77.4 26.7-90.5 64L64 64C28.7 64 0 92.7 0 128L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64l-37.5 0C269.4 26.7 233.8 0 192 0zm0 64a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM72 272a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zm104-16l128 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-128 0c-8.8 0-16-7.2-16-16s7.2-16 16-16zM72 368a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zm88 0c0-8.8 7.2-16 16-16l128 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-128 0c-8.8 0-16-7.2-16-16z"/></svg>
+                        </div>
+                        <h3>Manage:</h3>
+                    </div>
+                    
+                    <ul class="flex-col">
+                       <li><a href="#" class="" role="menuitem">Identification & Citizenship</a></li>
+                       <li><a href="#" class="" role="menuitem">Assets & Possessions</a></li>
+                       <li><a href="#" class="" role="menuitem">Property & Residency</a></li>
+                       <li><a href="#" class="" role="menuitem">Documents & Applications</a></li>
+                       <li><a href="/portfolio/grc-website/grc-services.html" class="">More...</a></li>
+                    </ul>
+                </nav>
+                <nav class="flex-col">
+                    <div class="col-header">
+                        <div class="btn-icon-padding">
+                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336l24 0 0-64-24 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l48 0c13.3 0 24 10.7 24 24l0 88 8 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-80 0c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
+                        </div>
+                        <h3>Find:</h3>
+                    </div>
+                    
+                    <ul class="flex-col">
+                       <li><a href="#" class="" role="menuitem">Resettlement Camps</a></li>
+                       <li><a href="#" class="" role="menuitem">Financial Assistance</a></li>
+                       <li><a href="#" class="" role="menuitem">Family & Social Support</a></li>
+                       <li><a href="#" class="" role="menuitem">Legal Aid & Representation</a></li>
+                       <li><a href="/portfolio/grc-website/grc-services.html" class="">More...</a></li>
+                    </ul>
+                </nav>
+                <nav class="flex-col">
+                    <div class="col-header">
+                        <div class="btn-icon-padding">
+                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7 .2 40.1S486.3 480 472 480L40 480c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8 .2-40.1l216-368C228.7 39.5 241.8 32 256 32zm0 128c-13.3 0-24 10.7-24 24l0 112c0 13.3 10.7 24 24 24s24-10.7 24-24l0-112c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"/></svg>
+                        </div>
+                        <h3>Report:</h3>
+                    </div>
+                    
+                    <ul class="flex-col">
+                       <li><a href="#" class="" role="menuitem">Complaints & Claims</a></li>
+                       <li><a href="#" class="" role="menuitem">Fraud & Theft</a></li>
+                       <li><a href="#" class="" role="menuitem">Supply Shortages</a></li>
+                       <li><a href="#" class="" role="menuitem">Property Damages</a></li>
+                       <li><a href="/portfolio/grc-website/grc-services.html" class="">More...</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div> 
+    </div>
+
+    <section class="page flex-col">
+        <div class="page-header flex-gap">
+            <div class="container">
+                <div class="page-header-info flex-col">
+                    <time>DATE</time>
+                    <h1>TITLE</h1>
+                </div>
+            </div>
+            
+            <div class="page-header-actions">
+                <ul aria-label="Page Actions">
+                    <li><button class="btn-tertiary">translate
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1Zm3.241 10.5v-.001c-.1-2.708-.992-4.904-1.89-6.452a13.919 13.919 0 0 0-1.304-1.88L12 3.11l-.047.059c-.354.425-.828 1.06-1.304 1.88-.898 1.547-1.79 3.743-1.89 6.451Zm-12.728 0h4.745c.1-3.037 1.1-5.49 2.093-7.204.39-.672.78-1.233 1.119-1.673C6.11 3.329 2.746 7 2.513 11.5Zm18.974 0C21.254 7 17.89 3.329 13.53 2.623c.339.44.729 1.001 1.119 1.673.993 1.714 1.993 4.167 2.093 7.204ZM8.787 13c.182 2.478 1.02 4.5 1.862 5.953.382.661.818 1.29 1.304 1.88l.047.057.047-.059c.354-.425.828-1.06 1.304-1.88.842-1.451 1.679-3.471 1.862-5.951Zm-1.504 0H2.552a9.505 9.505 0 0 0 7.918 8.377 15.773 15.773 0 0 1-1.119-1.673C8.413 18.085 7.47 15.807 7.283 13Zm9.434 0c-.186 2.807-1.13 5.085-2.068 6.704-.39.672-.78 1.233-1.118 1.673A9.506 9.506 0 0 0 21.447 13Z"></path></svg>
+                    </button></li>
+                    <li><button class="btn-tertiary">share
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path d="M20 5.5a3.498 3.498 0 0 1-6.062 2.385l-5.112 3.021a3.498 3.498 0 0 1 0 2.188l5.112 3.021a3.5 3.5 0 1 1-.764 1.29l-5.112-3.02a3.499 3.499 0 1 1-3.843-5.642 3.499 3.499 0 0 1 3.843.872l5.112-3.021A3.5 3.5 0 1 1 20 5.5Zm-1.5 13a2 2 0 1 0-3.999-.001 2 2 0 0 0 3.999.001Zm0-13a2 2 0 1 0-3.999-.001A2 2 0 0 0 18.5 5.5ZM5.5 14a2 2 0 1 0 .001-3.999A2 2 0 0 0 5.5 14Z"></path></svg>
+                    </button></li>
+                    <li><button class="btn-tertiary">print
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path d="M3.5 3.75C3.5 2.784 4.284 2 5.25 2h13.5c.966 0 1.75.784 1.75 1.75v7.5A1.75 1.75 0 0 1 18.75 13H5.25a1.75 1.75 0 0 1-1.75-1.75Zm-2 12c0-.966.784-1.75 1.75-1.75h17.5c.966 0 1.75.784 1.75 1.75v4a1.75 1.75 0 0 1-1.75 1.75H3.25a1.75 1.75 0 0 1-1.75-1.75ZM5.25 3.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h13.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Zm-2 12a.25.25 0 0 0-.25.25v4c0 .138.112.25.25.25h17.5a.25.25 0 0 0 .25-.25v-4a.25.25 0 0 0-.25-.25Z"></path><path d="M10 17.75a.75.75 0 0 1 .75-.75h6.5a.75.75 0 0 1 0 1.5h-6.5a.75.75 0 0 1-.75-.75Zm-4 0a.75.75 0 0 1 .75-.75h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1-.75-.75Z"></path></svg>
+                    </button></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="page-content flex-gap">
+            <main class="container flex-col flex-gap">
+                <div class="page-item-paragraph">
+                    <p>Lorem ipsum dolor sit amet consectetur. Neque tristique sodales vulputate eros condimentum augue faucibus ut id. Pellentesque ipsum id malesuada enim. Hendrerit at risus maecenas donec enim risus. Felis sed purus nibh erat orci nunc sed urna. Lectus bibendum auctor at suscipit platea etiam turpis.</p>
+                </div>
+
+                <div class="page-dropdown" aria-hidden="true">
+                    <div class="dropdown-title">On this page</div>
+                    <div class="page-toc">
+                        <ol>
+                            <li class=""><a href="#section-1">Section 1</a></li>
+                            <li class=""><a href="#section-2">Section 2</a></li>
+                            <li class=""><a href="#">Viverra ornare lectus cursus interdum iaculis dolor urna.</a></li>
+                            <li class=""><a href="#">A feugiat velit venenatis odio aliquam dignissim mi justo.</a></li>
+                        </ol>
+                    </div>
+                </div>
+    
+                <section id="section-1" class="section flex-col">
+                    <div class="page-item-section-title">
+                        <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+                    </div>
+                    <div class="section-body flex-col">
+                        <div class="page-item-paragraph">
+                            <p>Lorem ipsum dolor sit amet consectetur. Id ullamcorper venenatis praesent in enim justo id amet. Pretium tempus vestibulum morbi interdum et eu laoreet elit. Montes quis et praesent libero donec lorem.</p>
+                        </div>
+                        <ul class="page-item-bpts flex-col">
+                            <li><p>Lorem ipsum dolor sit amet consectetur. Velit amet neque convallis id facilisi ut non et id.</p></li>
+                            <li><p>Lorem ipsum dolor sit amet consectetur. Lorem nulla dolor ultricies sit amet egestas.</p></li>
+                            <li><p>Lorem ipsum dolor sit amet consectetur. Viverra ornare lectus cursus interdum iaculis dolor urna. Arcu amet lorem ut enim ullamcorper libero.</p></li>
+                            <li><p>Lorem ipsum dolor sit amet consectetur. A feugiat velit venenatis odio aliquam dignissim mi justo.</p></li>
+                        </ul>
+                        <div class="page-item-banner-block">
+                            <p>Lorem ipsum dolor sit amet consectetur. Velit tortor hac hendrerit id cras.</p>
+                            <a class="btn-primary">Lorem ipsum dolor</a>
+                        </div>
+                        <div class="page-item-paragraph">
+                            <p>Lorem ipsum dolor sit amet consectetur. Condimentum consectetur congue tempor adipiscing est sed. Tellus malesuada nulla ipsum dictumst vitae ac ipsum adipiscing porttitor. Turpis mattis eu platea amet vitae consectetur vitae. Sit habitasse odio urna in non. Massa massa nunc a ipsum ut.</p>
+                        </div>
+                        <div class="page-item-paragraph">
+                            <p>Lorem ipsum dolor sit amet consectetur. Pellentesque ultrices amet et volutpat lorem arcu pharetra donec risus. Eget tellus sed lacus vel nisl arcu mattis. Iaculis dolor ac id vitae pulvinar proin bibendum. Id condimentum iaculis nec mauris egestas. Nunc odio erat sed dolor molestie. Nec quisque iaculis eget aliquet odio. Massa duis est faucibus tortor vestibulum scelerisque bibendum maecenas tellus.</p>
+                        </div>
+                        <ul class="page-item-bpts flex-col">
+                            <li><p>Lorem ipsum dolor sit amet consectetur. Eu tincidunt proin malesuada auctor.</p></li>
+                            <li><p>Lorem ipsum dolor sit amet consectetur. Et enim nunc et donec pulvinar scelerisque in dictum. Placerat morbi diam turpis mauris semper tortor nisl condimentum non.</p></li>
+                            <li><p>Lorem ipsum dolor sit amet consectetur. Ac gravida lacus fermentum pretium quis nunc integer. Tristique eget ac adipiscing.</p></li>
+                        </ul>
+                    </div>
+                </section>
+    
+                <section id="section-2" class="section flex-col">
+                    <div class="page-item-section-title">
+                        <h2>Lorem nulla dolor ultricies sit amet egestas.</h2>
+                    </div>
+                    <div class="section-body flex-col">
+                        <div class="page-item-paragraph">
+                            <p>Lorem ipsum dolor sit amet consectetur. A nulla enim quis nulla vitae neque. Ultrices diam amet blandit nisi consequat orci. Nibh tellus eget scelerisque augue. Id tortor tempus tellus odio. A rhoncus ornare venenatis varius nulla libero mauris ipsum platea.</p>
+                        </div>
+                        <div class="component">
+                            <figure class="component-media">
+                                <img src="" class="" alt="">
+                            </figure>
+                        </div>
+                        <div class="component-set">
+                            <figure class="component-media">
+                                <img src="" class="" alt="">
+                            </figure>
+                            <figure class="component-media">
+                                <img src="" class="" alt="">
+                            </figure>
+                            <figure class="component-media">
+                                <img src="" class="" alt="">
+                            </figure>
+                        </div>
+                        <div class="page-item-paragraph">
+                            <p>Lorem ipsum dolor sit amet consectetur. In amet gravida enim ullamcorper pretium. Placerat pellentesque nibh volutpat in congue. Lectus sed at quis est et. Amet a amet tempus sed eros in. Ut rhoncus a blandit varius vulputate. Sodales tellus sit sit amet. Turpis diam mauris duis consequat at sit.</p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            
+            <aside class="page-content-nav flex-gap flex-col">
+                <div class="page-dropdown-container" aria-hidden="false">
+                    <nav class="page-dropdown toc" aria-hidden="false">
+                        <div class="dropdown-title">On this page</div>
+                        <!-- <button onclick="toggleTOC()" class="btn-dropdown">On this page...
+                            <div class="btn-icon-padding">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M5.22 8.22a.749.749 0 0 0 0 1.06l6.25 6.25a.749.749 0 0 0 1.06 0l6.25-6.25a.749.749 0 1 0-1.06-1.06L12 13.939 6.28 8.22a.749.749 0 0 0-1.06 0Z"></path></svg>
+                            </div>
+                        </button> -->
+                        <div class="dropdown-panel toc">
+                            <ol class="flex-col">
+                                <li class=""><a href="#section-1" class="in-page-link in-page-current">Lorem ipsum dolor sit amet consectetur.</a></li>
+                                <li class=""><a href="#section-2" class="in-page-link">Lorem nulla dolor ultricies sit amet egestas.</a></li>
+                                <!-- <li class=""><a href="#" class="in-page-link">Viverra ornare lectus cursus interdum iaculis dolor urna.</a></li>
+                                <li class=""><a href="#" class="in-page-link">A feugiat velit venenatis odio aliquam dignissim mi justo.</a></li> -->
+                            </ol>
+                        </div>
+                    </nav>
+                </div>
+                <div class="page-item-related-info flex-col" aria-labelledby="related-info-label">
+                    <h4 id="related-info-label">Related Information</h4>
+                    <ul class="flex-col">
+                        <li><a href="#">Lorem ipsum dolor sit amet consectetur.</a></li>
+                        <li><a href="#">Lorem ipsum dolor sit amet consectetur. Consectetur interdum tortor orci pharetra in quis amet.</a></li>
+                        <li><a href="#">Lorem ipsum dolor sit amet consectetur. Rhoncus pulvinar faucibus ante sed.</a></li>
+                    </ul>
+                </div>
+            </aside>            
+        </div>
+    </section>
+
+    <div class="footer-container">
+        <footer class = "footer">
+            <div class="footer-primary">
+                <nav class = "footer-primary-sitemap" aria-label="Primary Footer Navigation">
+                    <ul class="flex-col">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="grc-bulletin.html">The Bulletin</a></li>
+                        <li><a href="grc-services.html">Our Services</a></li>
+                        <li><a href="grc-protocols.html">Protocols</a></li>
+                        <li><a href="grc-council.html">Council</a></li>
+                        <li><a href="#">The Blip</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-secondary flex-col">
+                <nav class="footer-secondary-branding" aria-label="Secondary Footer Navigation">
+                    <ul class = "flex-col">
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Copyright Policy</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                    </ul>
+                </nav>
+                <nav class="footer-secondary-socialmedia" aria-label="Secondary Footer Social Media Navigation">
+                    <ul class = "">
+                        <li><a href="#" class="btn-icon"> <!-- facebook -->
+                            <div class="btn-icon-padding">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"/></svg>
+                            </div>
+                        </a></li>
+                        <li><a href="#" class="btn-icon"> <!-- instagram -->
+                            <div class="btn-icon-padding">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+                            </div>
+                        </a></li>
+                        <li><a href="#" class="btn-icon"> <!-- twitter, X -->
+                            <div class="btn-icon-padding">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+                            </div>
+                        </a></li>
+                        <li><a href="#" class="btn-icon"> <!-- youtube -->
+                            <div class="btn-icon-padding">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"/></svg>
+                            </div>
+                        </a></li>
+                    </ul>
+                </nav>
+                <div class="footer-secondary-address">
+                    <strong>GRC Headquarters</strong>
+                    <br>123 Main Street<br>New York, USA
+                </div>
+            </div>
+        </footer>
+    </div>
+  </body>
+</html>

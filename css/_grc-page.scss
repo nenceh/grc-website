@@ -1,0 +1,380 @@
+@media screen and (max-width: 479px){
+    .menu-item-info{
+        .graphic{display: none;}
+        h2{display: block;}
+    }
+    .page{
+        padding: 24px;
+        &-content .section-body ul{
+            gap: 4px;
+            padding-left: 8px;
+            padding-bottom: 4px;
+        }
+    }
+}
+@media screen and (min-width: 480px){
+    .menu-item-info h2{display: none;}
+    .container, .footer-primary{flex: 1 1 calc((100% + 24px) * (5 / 8) - 24px);}
+    .page-content-nav, .page-header-actions, .footer-secondary{flex: 1 1 calc((100% + 24px) * (3 / 8) - 24px);}
+    main > .page-dropdown, .page-item-paragraph, .page-item-bpts, .top, .page-header-info, .page-item-section-title {max-width: 513px;}
+    .page{
+        padding: 24px 35px 40px;
+        &-content .section-body ul{
+            gap: 4px;
+            padding-left: 24px;
+            padding-bottom: 4px;
+        }
+    }
+}
+@media screen and (max-width: 762px){
+    main, .section, .section-body, .page-header .container{
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .page{
+        &-header{
+            &-info{ box-shadow: 0px -3px 0px -1px get-color(grc-light, primary-container-2) inset;}
+            &-actions{display: none;}
+        }
+        &-content{
+            main > .page-dropdown .page-toc ol{
+                columns: 200px 2;
+                li{
+                    padding: 4px 8px;
+                    a{margin-top: 2px;}
+                }
+            }
+            .dropdown-panel{
+                &.filter{padding: 4px 0;}
+                li{
+                    padding: 4px 8px 8px 16px;
+                    input[type="checkbox"]{
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
+            }
+            
+            &-nav > .page-dropdown-container{display: none;}
+            .page-dropdown{margin: 16px 0 80px;}
+            .page-toc ol li{
+                flex: 1;
+                max-width: 200px;
+                width:fit-content;
+            }
+            .page-item-related-info{box-shadow: 0px 3px 0px -1px get-color(grc-light, primary-container-2) inset;}
+        }
+    }
+}
+@media screen and (min-width: 763px){
+    .page-item-paragraph, .page-item-bpts, .top, .page-header-info, .page-item-section-title{max-width: 544px;}
+
+    .page{
+        &-header{box-shadow: 0px -3px 0px -1px get-color(grc-light, primary-container-2) inset;}
+        &-content{
+            main > .page-dropdown{display: none;}
+            &-nav{
+                .page-dropdown{ top: 8%;}
+                .dropdown-panel{
+                    &.filter{padding: 4px 0;}
+                    li{
+                        position: relative;
+                        margin-left: 0;
+                        padding: 4px 8px 8px 20px;
+                        input[type="checkbox"]{
+                            width: 16px;
+                            height: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 880px){
+    .container{display: flex;}
+    .page{
+        gap: 16px;
+        &-item{
+            &-banner-block{
+                flex-wrap: wrap;
+                gap: 16px 24px;
+                margin: 4px 0;
+                padding: 24px;
+            }
+            &-menu .menu-item-info .graphic{height: 64px;}
+            &-related-info{
+                ul{
+                    padding-left: 16px;
+                    a{@include set-text(body, small-semibold);}
+                }  
+            }
+        }
+        &-header{
+            @include set-text(body, small-semibold);
+            padding-bottom: 4px !important;
+            &-info{gap: 4px;}
+            &-actions>ul{gap: 4px;}
+        }
+        &-content{
+            .page-item-section-title{margin-bottom: 4px;}
+            .dropdown-title{
+                @include set-text(body, small-semibold);
+                padding-bottom: 4px;
+            }
+            section{
+                .section-body{gap: 16px;}
+                .component{
+                    width: 100%;
+                    figure{height: 200px;}
+                    &-set{
+                        width: 100%;
+                        gap: 16px;
+                        figure{
+                            height: 100px;
+                            min-width: 160px;
+                        }
+                    }
+                }
+                .page-nav li:not(:nth-last-of-type(-n+2)){margin-left:32px;}
+            }
+        }
+        .form-communications{margin-top: 24px;}
+    }
+}
+
+@media screen and (min-width: 881px){
+    .page-header-info, .page-item-section-title{max-width: none;}
+    .page-item-paragraph, .page-item-bpts, .top{max-width: 622px;}
+
+    .container, .footer-primary{flex: 1 1 calc((200% - 40px) / 3);}
+    
+    .page-content-nav, .page-header-actions, .footer-secondary{flex: 1 1 calc((100% - 80px) / 3);}
+
+    .page{
+        padding: 24px 40px 80px;
+        gap: 24px;
+
+        &-item{
+            &-banner-block{
+                gap: 20px;
+                margin: 8px 0;
+                padding: 20px;
+            }
+            &-menu .menu-item-info .graphic{height: 100px;}
+            &-related-info ul{
+                padding-left: 24px;
+                a{@include set-text(body, large-semibold);}
+            }
+        }
+        &-header{
+            @include set-text(body, large-semibold);
+            padding-bottom: 8px !important;
+            &-info{gap: 8px;}
+            &-actions>ul{
+                gap: 8px;
+                justify-content: flex-end;
+            }
+        }
+        &-content{
+            .page-item-section-title{margin-bottom: 8px;}
+            section{
+                .section-body{gap: 20px;}
+                ul{
+                    gap: 8px;
+                    padding-left: 40px;
+                    padding-bottom: 8px;
+                }
+                .component{
+                    figure{height: 320px;}
+                    &-set{
+                        gap: 20px;
+                        figure{
+                            height: 160px;
+                            min-width: 200px;
+                        }
+                    }
+                }
+            }
+            .page-numbers-nav li{
+                &:not(:nth-last-of-type(-n+2)){margin-left:64px;}
+                &:nth-last-of-type(-n+2){margin-left: 40px;}
+            }
+            &-nav{
+                .page-dropdown{
+                    top: 16%;
+                    .dropdown-title{
+                        @include set-text(body, large-semibold);
+                        padding-bottom: 8px;
+                    }
+                    .dropdown-panel{
+                        &.filter{padding: 4px 0;}
+                        li{
+                            position: relative;
+                            margin-left: 0;
+                            padding-top: 8px;
+                            input[type="checkbox"]{
+                                width: 18px;
+                                height: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .form-communications{margin-top: 40px;}
+    }
+}
+
+@media screen and (min-width: 1176px){
+    .page{
+        padding-left: 80px;
+        padding-right: 80px;
+        section.proj-timeline{
+            padding: 40px 80px;
+            margin: 0 -80px;
+        }
+    }
+    .page-item-paragraph, .page-item-bpts, .top{max-width: 680px;}
+}
+
+@media screen and (max-width: 1220px){.page-header-actions ul li:first-child{display: none;}}
+
+@media screen and (min-width: 1441px){
+    .page, .header, .subheader, .footer, .landing-containers, .form-container{
+        width: 1440px;
+        margin: 0 auto;
+    }
+}
+
+.page{
+    &-item{
+        &-banner-block{flex-wrap: wrap;
+            display: flex;
+            background-color: #E8ECF3;
+            border-radius: 8px;
+            align-items: center;
+            p{
+                min-width: 200px;
+                flex: 1;
+            }
+        }
+        &-menu{
+            flex-flow: row wrap !important;
+            padding-bottom: 0 !important;
+            .menu-item{
+                flex: 1;
+                gap: 8px;
+                min-width: 298px;
+                max-width: 400px;
+                &-info{
+                    position: relative;
+                    .graphic{background-color: lightgray;}
+                }
+            }
+        }
+        &-related-info{
+            padding-top: 8px;
+            ul{
+                gap: 8px;
+                padding-bottom: 8px;
+                a{vertical-align: text-top;}
+            }
+        }
+    }
+    &-header{
+        flex-flow: row nowrap !important;
+        &-actions{
+            align-self: flex-end;
+            &>ul{
+                display: flex;
+                justify-content: flex-end;
+                list-style-type: none;
+            }
+        }
+    }
+    &-content{
+        main .page-toc-list > ol {width: fit-content;}
+        &, &-nav{padding-bottom: 0px !important;}
+        &-nav{justify-content: flex-end;}
+        .page-dropdown{
+            &.toc{
+                position: sticky;
+                padding-left: 16px;
+            }
+            &-container{
+                position: relative;
+                height:100%;
+            }
+            &>button{
+                width: 100%;
+                background-color: get-color(grc-light, primary-container-2);
+                color: get-color(grc-light, on-secondary);
+                svg{fill: get-color(grc-light, on-secondary);}
+            }
+            .dropdown-panel{
+                &.filter{
+                    border: 1px solid get-color(grc-light, primary-container-2);
+                    border-top: 0;
+                    box-shadow: 0 5px 10px 3px rgba(0,0,0,0.1);
+                    display: none;
+                }
+                &.toc{
+                    border-left: 1px solid get-color(grc-light, primary-container-2);
+                }
+                ol,ul{
+                    list-style: none;
+                    li{
+                        position: relative;
+                        margin-left: 0;
+                        a.in-page{
+                            &-link{
+                                color: get-color(grc-light, secondary-variant);
+                                &:hover, &:active{color: get-color(grc-light, secondary-variant-hover);}
+                            }
+                            &-current{
+                                color: get-color(grc-light, primary);
+                                &:after{
+                                    content: "";
+                                    position: absolute;
+                                    background-color: get-color(grc-light, primary);
+                                    left: 0px;
+                                    top: 0;
+                                    bottom: 0;
+                                    width: 4px;
+                                }
+                            }
+                        }
+                    }
+                }
+                ul{list-style: none;}
+                .filter-item{
+                    display: flex;
+                    gap: 16px;
+                    label{width: 100%;}
+                }
+            }
+        }
+        section{
+            .component{
+                &-set{
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+                &-media{
+                    flex: 1;
+                    height: 100%;
+                }
+            }
+            .page-numbers-nav ul{
+                padding: 0 16px;
+                display: flex;
+                list-style: none;
+                li:first-child{margin-left: 0;}
+            }
+        }
+    }
+}
+
+.page-item-paragraph, .page-item-bpts, .top, .page-header-info, .page-item-section-title, main > .page-dropdown{width: 100%;}

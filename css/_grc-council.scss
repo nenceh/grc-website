@@ -1,0 +1,76 @@
+@media screen and (max-width: 880px){
+    .page-content section .representative{
+        &-img{
+            height: 200px;
+            width: 200px;
+        }
+        &-info{
+            @include set-text(body, caption-small-semibold);
+            gap: 4px;
+            padding: 24px 32px;
+
+            h2{@include set-text(body, small-semibold);}
+        }
+    }
+}
+
+@media screen and (min-width: 881px){
+    .page-content section{
+        .representative{
+            flex-direction: column;
+            &-img{height: 200px;}
+            &-info{
+                @include set-text(body, caption-semibold);
+                gap: 8px;
+                padding: 24px 16px 32px;
+
+                h2{@include set-text(body, large-semibold);}
+            }
+        }
+        .rep-secondary{
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            .representative{flex: 1;}
+        }
+    }
+}
+
+.page-content section{
+    &.countries-list{
+        gap: 40px;
+        width: 100%;
+    }
+    .country{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 0 0 12px 0;
+        padding-right: 24px;
+        &:last-child{margin-bottom: 0;}
+        &-info{
+            &-name{
+                transition: color .2s ease, text-decoration .2s ease;
+                text-decoration: underline solid;
+            }
+            &-date{color: get-color(grc-light, primary-variant);}
+        }
+        &-flag{
+            width: 40px;
+            height: 40px;
+        }
+        &:hover, &:active{
+            h3{color: get-color(grc-light, secondary-variant);}
+        }
+    }
+    .representative{
+        display: flex;
+        position: relative;
+        &-info{
+            flex: 1;
+            background-color: lightgoldenrodyellow;
+        }
+        margin-bottom: 40px;
+    }
+}

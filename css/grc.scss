@@ -1,0 +1,493 @@
+@import './variables';
+@import './grc-home';
+@import './component-header';
+@import './grc-page';
+@import './grc-protocols';
+@import './grc-council';
+
+@font-face {
+    font-family: 'Adobe Garamond Pro';
+    src: url('/font/AGaramondPro-Regular.otf')
+        url('/font/AGaramondPro-Semibold.ttf');
+}
+
+@media screen and (max-width: 479px){
+    body{margin-top: 48px;}
+    .form{
+        &-container{
+            padding: 24px;
+        }
+        &-communications button[type="submit"]{
+            width: 115px;
+        }
+    }
+    .footer-primary, .footer-secondary{min-width: 298px;}
+}
+
+@media screen and (min-width: 480px) and (max-width: 880px){
+    body{margin-top: 56px;}
+    .form{
+        &-container{
+            padding: 40px 35px;
+        }
+        &-communications button[type="submit"]{
+            width: 161px;
+        }
+    }
+    .footer-secondary{min-width: 242px;}
+}
+
+@media screen and (max-width: 762px){
+    body main{padding-bottom: 24px !important;}
+    .flex-gap{flex-direction: column;}
+    .form{
+        &-communications {
+            padding: 24px;
+            .content{
+                gap: 16px;
+                .user-input .block{gap: 24px;}
+            }
+            .header-logo{ display: none; }
+        }
+    }
+}
+
+@media screen and (min-width: 763px){
+    body main{padding-bottom: 0 !important;}
+    .form-communications .content{
+        gap: 24px;
+        .user-input .block{gap: 24px;}
+    }
+}
+
+@media screen and (max-width: 880px){
+    html{scroll-padding-top: 64px;}
+    svg{
+        width: 16px;
+        height: 16px;
+    }
+    %btn{ 
+        @include set-text(body, button-small);
+        padding: 12px 16px;
+    }
+    .btn-header-cta{ padding: 0; padding-left: 12px; }
+    .btn-tertiary{padding: 8px 16px;}
+
+    body{
+        &,p{@include set-text(body, small);}
+        h1{ @include set-text(heading, 1-small); }
+        h2{ @include set-text(heading, 2-small); }
+        h3{ @include set-text(heading, 3-small); }
+        h4 { @include set-text(heading, 4-small); }
+        h5 { @include set-text(heading, 5-small); }
+        h6 { @include set-text(heading, 6-small); }
+        button{@include set-text(body, button-small);}
+
+        a{@include set-text(body, small-semibold);}
+
+        :not(.header-logo):not(.btn-header-modal li){
+            .page-toc a, .page-content-nav .page-dropdown-container a, label, .page-toc ol >li::marker{
+                @include set-text(body, caption-small-semibold);
+                vertical-align: text-top;
+            }
+        }
+
+        .page-content li{margin-left: 20px;}
+        
+        main .minor-block{margin-bottom: 40px;}
+    }
+    .flex-gap{gap: 24px;}
+    .subheader{gap: 40px;}
+    .form-communications{
+        gap: 97px;
+        padding: 24px;
+        .content{
+            flex: 1;
+            .user-input{
+                flex-direction: column;
+                gap: 16px;
+                .input{gap: 4px;}
+                .block .input{flex: 1;}
+            }
+        }
+        select{font-size: 12px;}
+    }
+    .footer{
+        gap: 40px 24px;
+        padding: 0 35px;
+    }
+    
+}
+
+@media screen and (min-width: 881px){
+    html{scroll-padding-top: 96px;}
+    svg{
+        width: 24px;
+        height: 24px;
+    }
+    input[type=text], .btn-header-cta{padding: 12px 16px;}
+    %btn{
+        @include set-text(body, button);
+        padding: 16px 20px;
+    }
+    .btn-header-cta{ padding: 0; padding-left: 16px; }
+    .btn-tertiary{padding: 6px 16px;}
+
+    body{
+        margin-top: 88px;
+        &,p{@include set-text(body, large);}
+        h1{ @include set-text(heading, 1); }
+        h2{ @include set-text(heading, 2); }
+        h3{ @include set-text(heading, 3); }
+        h4 { @include set-text(heading, 4); }
+        h5 { @include set-text(heading, 5); }
+        h6 { @include set-text(heading, 6); }
+
+        a{@include set-text(body, large-semibold);}
+        
+        :not(.header):not(.btn-header-modal li):not(.page-nav a):not(.page-item-related-info){
+            .page-content-nav .page-dropdown-container a, label, .page-toc ol >li::marker{
+                @include set-text(body, caption-semibold);
+                vertical-align: text-top;
+            }
+        }
+        
+        .page-content li{margin-left: 24px;}
+        button{@include set-text(body, button);}
+
+        main .minor-block{margin-bottom: 40px;}
+
+        .header-logo {
+            .large{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                width: 180px;
+                span{
+                    padding-top: 5px;
+                    width: 117px;
+                }
+        
+                img, svg{
+                    height: 64px;
+                    width: 53px;
+                }
+            }
+        }
+    }  
+
+    .width{ max-width: 427px; }
+    .flex-gap{
+        flex-direction: row;
+        gap: 40px;
+    }
+    .subheader{gap: 80px;}
+    
+    .form{
+        &-container{padding: 40px;}
+        
+        &-communications{
+            padding: 40px;
+            .content{
+                .user-input, .block{gap: 40px;}
+                .input{gap: 8px;}
+                .email-input{width: 244px;}
+                .language-input{width: 149px;}
+                button[type="submit"]{width: 109px;}
+            }
+            select{height: 40px;}
+        }
+    }
+    .footer{
+        justify-content: space-between;
+        gap: 40px;
+        padding: 0 40px;
+        &-secondary-socialmedia{
+            .btn-icon-padding{padding: 12px;}
+            svg{
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1175px){
+    .form-communications{
+        .header-logo{
+            @include set-text(header, logo);
+            .large{display:none;}
+            .small{display: block;}
+        }
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 1176px){
+    .form-container, .footer{padding: 40px 80px;}
+    .form-communications .content{
+        .email-input{
+            width: 290px;
+        }
+        .language-input{
+            width: 180px;
+        }
+        button[type="submit"]{
+            width: 140px;
+        }
+    }
+}
+
+*, :after, :before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+.modal-open{
+    overflow-y: hidden;
+    //padding-right set in JS file
+}
+
+body{
+    min-width: 346px;
+    text-underline-offset: 3px;
+    overflow-x: hidden;
+    &,a{color: get-color(grc-light, primary);}
+    a{
+        display: inline-block;
+        width: fit-content;
+        transition: color .2s ease, text-decoration .2s ease, border .2s ease;
+        &.full-link{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        &:hover, &:active{color: get-color(grc-light, secondary-variant);}
+        &.block-link{
+            text-decoration: underline solid transparent;
+            &:hover{text-decoration: underline solid;}
+        }
+    }
+    .tag a{
+        font-weight: bold;
+        color: get-color(grc-light, secondary-variant);
+    }
+
+    nav ul{list-style: none;}
+
+    figure img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    main .minor-block{
+        border-bottom: 1px solid get-color(grc-light, primary-container-1);
+        padding-bottom: 24px;
+        .block-data{
+            display: flex;
+            gap: 8px;
+        }
+    }
+    .header-nav-lang, .breadcrumb-item, .submenu-language{
+        a[aria-current="page"] {
+            pointer-events: none;
+            cursor: default;
+            text-decoration: none;
+            font-weight: 600;
+        }
+    }
+}
+
+%btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    border: none;
+    border-radius: 12px;
+    cursor:pointer;
+    transition: background-color .2s ease, color .2s;
+    height: fit-content;
+    .rotate{
+        transform: rotate(-180deg);
+        transition: transform .9s;
+    }
+    .rotate-reset{
+        transform: rotate(0);
+        transition: transform .6s;
+    }
+}
+.btn-dropdown{
+    @extend %btn;
+    padding: 0;
+    padding-left: 16px;
+    border-radius: 0;
+    .btn-icon-padding{
+        flex: 1;
+        text-align:right;
+    }
+}
+.btn-header-cta{
+    @extend %btn;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+    background: get-color(grc-light, secondary);
+    color: get-color(grc-light, on-secondary);
+
+    &:hover, &:active{background: get-color(grc-light, secondary-hover);}
+    .btn-icon-padding{padding: 6px 8px;}
+}
+.btn-primary{
+    @extend %btn;
+    background: get-color(grc-light, secondary-variant);
+    color: get-color(grc-light, on-secondary-variant);
+    box-shadow: 0 10px 18px -8px rgba(16, 43, 96, 0.45);
+    text-decoration: none;
+
+    &:hover, &:active{
+        background: get-color(grc-light, secondary-variant-hover);
+        color: get-color(grc-light, on-secondary-variant);
+    }
+}
+.btn-secondary{
+    @extend %btn;
+    outline: 1px solid get-color(grc-light, primary-container-2);
+    outline-offset: -1px;
+    background: get-color(grc-light, on-secondary-variant);
+    color: get-color(grc-light, primary-variant);
+    gap: 8px;
+    text-decoration: none;
+
+    svg{fill: get-color(grc-light, primary-variant);}
+    &:hover, &:active{
+        background: get-color(grc-light, secondary-container);
+        color: get-color(grc-light, primary-variant);
+    }
+}
+.btn-tertiary{
+    @extend .btn-secondary;
+    border-radius: 6px;
+    @include set-text(body, caption-semibold);
+    &:hover, &:active{background: get-color(grc-light, primary-container-hover);}
+}
+.btn-icon{
+    @extend %btn;
+    padding: 0;
+    border: none;
+    border-radius: 64px;
+    background: transparent;
+    
+    &-padding{
+        padding: 8px;
+        line-height: 0;
+        transition: background-color .2s ease;
+    }
+}
+
+.input-container, .subheader-search, .search-expand{
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: get-color(neutral, 0);
+    box-shadow: inset 0 0 8px rgba(106, 118, 121, 0.6);
+}
+
+input, select{
+    padding: 8px;
+    padding-left: 16px;
+    line-height: 1.6rem;
+    font-size: 1.4rem;
+    background: transparent;
+    width: 100%;
+    border: none;
+    &, &::placeholder{color: get-color(grc-light, primary-variant);}
+    &:focus {
+        outline: none;
+        color: get-color(grc-light, primary);
+    }
+}
+
+.flex-col{ display: flex; flex-direction: column; }
+.center{ align-items: center;}
+.flex-gap{
+    display: flex;
+    padding-bottom: 40px;
+}
+
+.form{
+    &-communications{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        outline: 2px solid get-color(grc-light, secondary-variant);
+        border-radius: 16px;
+        outline-offset: -2px;
+
+        &-container{
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+            
+        .content{
+            padding-bottom: 0;
+            .user-input{
+                display: flex;
+                .input-container, input, select{border-radius: 4px;}
+                .block{
+                    display: flex;
+                    align-items: flex-end;
+                }
+            }
+        }
+    }
+}
+
+.footer{
+    a{@include set-text(body, footer-semibold);}
+    @include set-text(body, footer);
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    &-container{background-color: get-color(grc-light, secondary-variant);}
+
+    a:hover{color: get-color(grc-light, secondary-container);}
+    ul{
+        justify-content: flex-start;
+        list-style: none;
+    }
+    &-primary{
+        a{color: get-color(grc-light, on-secondary-variant);}
+        ul{gap: 24px;}
+    }
+    &-secondary{
+        gap: 24px;
+        &-branding>ul{
+            gap: 16px;
+            a{color: get-color(grc-light, on-secondary-variant-2);}
+        }
+        &-socialmedia>ul{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            li{
+                svg{fill: get-color(grc-light, on-secondary-variant);}
+                .btn-icon:hover, .btn-icon:active{background-color: get-color(grc-light, secondary-variant-hover);}
+            }
+        }
+        &-address{
+            line-height: calc(100% + 4px);
+            color: get-color(grc-light, on-secondary-variant);
+        }
+    }
+}
