@@ -1,14 +1,14 @@
 <mark>Read the complete version (with additional information, pictures, and Figma widgets) on my website!</mark>
 
 ## On this page...
-  1. [Introduction](-intro)
-  2. [Project Goals](-goals)
-  3. [Development](-development)
-  4. [Early Ideation](-early-ideation)
-  5. [Testing](-testing)
-  6. [Final Design](-final-designs)
-  7. [What I Learned](-what-i-learned)
-  8. [Next Steps](-next-steps)
+  1. [Introduction](#-intro)
+  2. [Project Goals](#-goals)
+  3. [Development](#-development)
+  4. [Early Ideation](#-early-ideation)
+  5. [Testing](#-testing)
+  6. [Final Design](#-final-designs)
+  7. [What I Learned](#-what-i-learned)
+  8. [Next Steps](#-next-steps)
 
 # 🚀 Intro
 The year is 2024: Six months ago, the Earth's mightiest heroes reversed the effects of The Blip, the catastrophic event that caused the vanishing of half of the global population five years ago. This reversal brought back the vanished population, and now Earth is sent into a crisis as everyone is trying to manage the surge in population. In response, select global leaders established the <strong><em>Global Repatriation Council (GRC)</em></strong> to restore order and bring the world back to how it was before The Blip.
