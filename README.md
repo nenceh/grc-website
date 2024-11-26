@@ -1,5 +1,7 @@
 <mark>Read the complete version (with additional information, pictures, and Figma widgets) on my website!</mark>
 
+![Figma thumbnail of this project: /img/thumbnail-figma.png](/img/thumbnail-figma.png)
+
 ## On this page...
   1. [Introduction](#-intro)
   2. [Project Goals](#-goals)
