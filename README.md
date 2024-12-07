@@ -1,4 +1,4 @@
-<mark>Read the complete version (with additional information, pictures, and Figma widgets) on my website!</mark>
+<mark>Read the complete version (with additional information, pictures, and Figma widgets) on my website [here](https://nenceh.github.io/portfolio/grc-website.html)!</mark>
 
 ![Figma thumbnail of this project: /img/thumbnail-figma.png](/img/thumbnail-figma.png)
 

@@ -36,6 +36,10 @@
     }
 }
 
+@media (hover: hover), (-ms-high-contrast:none) and (pointer: fine){
+    .page-content section .country:hover h3{color: get-color(grc-light, secondary-variant);}
+}
+
 .page-content section{
     &.countries-list{
         gap: 40px;
@@ -60,9 +64,7 @@
             width: 40px;
             height: 40px;
         }
-        &:hover, &:active{
-            h3{color: get-color(grc-light, secondary-variant);}
-        }
+        &:active h3{color: get-color(grc-light, secondary-variant);}
     }
     .representative{
         display: flex;

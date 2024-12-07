@@ -232,8 +232,10 @@ init_members = () => {
 }
 
 $(document).ready(function(){
+    init_council()
+    init_members()
     $(window).on("load", function(){
-        init_council()
-        init_members()
+        // init_council()
+        // init_members()
     })
 })

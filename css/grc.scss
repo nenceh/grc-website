@@ -11,6 +11,32 @@
         url('/font/AGaramondPro-Semibold.ttf');
 }
 
+@media (hover: hover), (-ms-high-contrast:none) and (pointer: fine){
+    a{
+        &:hover{color: get-color(grc-light, secondary-variant);}
+        &.block-link:hover{text-decoration: underline solid;}
+    }
+
+    .btn{
+        &-primary:hover{
+            background: get-color(grc-light, secondary-variant-hover);
+            color: get-color(grc-light, on-secondary-variant);
+        }
+        &-secondary:hover{
+            background: get-color(grc-light, secondary-container);
+            color: get-color(grc-light, primary-variant);
+        }
+        &-tertiary{background: get-color(grc-light, primary-container-hover);}
+    }
+
+    .btn-header-cta:hover{background: get-color(grc-light, secondary-hover);}
+
+    .footer{
+        a:hover{color: get-color(grc-light, secondary-container);}
+        &-secondary-socialmedia .btn-icon:hover{background-color: get-color(grc-light, secondary-variant-hover);}
+    }
+}
+
 @media screen and (max-width: 479px){
     body{margin-top: 48px;}
     .form{
@@ -269,10 +295,10 @@ body{
             height: 100%;
         }
         
-        &:hover, &:active{color: get-color(grc-light, secondary-variant);}
+        &:active{color: get-color(grc-light, secondary-variant);}
         &.block-link{
             text-decoration: underline solid transparent;
-            &:hover{text-decoration: underline solid;}
+            &:active{text-decoration: underline solid;}
         }
     }
     .tag a{
@@ -344,7 +370,7 @@ body{
     background: get-color(grc-light, secondary);
     color: get-color(grc-light, on-secondary);
 
-    &:hover, &:active{background: get-color(grc-light, secondary-hover);}
+    &:active{background: get-color(grc-light, secondary-hover);}
     .btn-icon-padding{padding: 6px 8px;}
 }
 .btn-primary{
@@ -354,7 +380,7 @@ body{
     box-shadow: 0 10px 18px -8px rgba(16, 43, 96, 0.45);
     text-decoration: none;
 
-    &:hover, &:active{
+    &:active{
         background: get-color(grc-light, secondary-variant-hover);
         color: get-color(grc-light, on-secondary-variant);
     }
@@ -369,7 +395,7 @@ body{
     text-decoration: none;
 
     svg{fill: get-color(grc-light, primary-variant);}
-    &:hover, &:active{
+    &:active{
         background: get-color(grc-light, secondary-container);
         color: get-color(grc-light, primary-variant);
     }
@@ -378,7 +404,7 @@ body{
     @extend .btn-secondary;
     border-radius: 6px;
     @include set-text(body, caption-semibold);
-    &:hover, &:active{background: get-color(grc-light, primary-container-hover);}
+    &:active{background: get-color(grc-light, primary-container-hover);}
 }
 .btn-icon{
     @extend %btn;
@@ -461,7 +487,7 @@ input, select{
     padding-bottom: 40px;
     &-container{background-color: get-color(grc-light, secondary-variant);}
 
-    a:hover{color: get-color(grc-light, secondary-container);}
+    a:active{color: get-color(grc-light, secondary-container);}
     ul{
         justify-content: flex-start;
         list-style: none;
@@ -482,7 +508,7 @@ input, select{
             gap: 16px;
             li{
                 svg{fill: get-color(grc-light, on-secondary-variant);}
-                .btn-icon:hover, .btn-icon:active{background-color: get-color(grc-light, secondary-variant-hover);}
+                .btn-icon:active{background-color: get-color(grc-light, secondary-variant-hover);}
             }
         }
         &-address{

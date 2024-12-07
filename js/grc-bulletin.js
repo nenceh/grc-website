@@ -152,8 +152,9 @@ const updateFilter = (id) => {
 } */
 
 $(document).ready(function(){
+    init_list()
     $(window).on("load", function(){
-        init_list()
+        // init_list()
         //updateFilter('filter-viewall')
     })
 
