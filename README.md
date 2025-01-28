@@ -21,6 +21,8 @@ The Blip led many survivors to relocate to new countries and occupy previously-o
 
 Years after the show had ended, I was watching a YouTube video discussing the effectiveness of the GRC, which made me think about how the GRC would have advertised their plan and how they might have been perceived by the general public if such a global disaster happened in real life. This led me to reflect on how global corporations were perceived during the COVID-19 pandemic, which reminded how much we relied on the Internet for aid, services and information access. Eventually, I pondered about what a website for the GRC might look like.
 
+I do not own any aspect of Marvel, and no copyright or trademark infringement is intended. All rights go to the Marvel, Marvel Comics, Marvel Studios, and the Walt Disney Company.
+
 # 🏆 Goals
 My goal was to create a comprehensive self-directed project that involved both UX design and front-end programming. I chose to "represent" the GRC in this project, as if I am a developer hired by the GRC, to gain more experience in understanding and exploring the motives and goals of employers and stakeholders. If I align our real-life setting and time with when TFATWS took place, the GRC would likely be very eager to launch an website as quickly as possible.
 

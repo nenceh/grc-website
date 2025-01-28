@@ -120,7 +120,10 @@
             &-actions>ul{gap: 4px;}
         }
         &-content{
-            .page-item-section-title{margin-bottom: 4px;}
+            .page-item-section-title{
+                width: 100%;
+                margin-bottom: 4px;
+            }
             .dropdown-title{
                 @include set-text(body, small-semibold);
                 padding-bottom: 4px;
